@@ -8,7 +8,7 @@ const corsOptions = {
   optionsSuccessStatus: 200 
 }
 router.use(cors(corsOptions));
-router.put('/send', function(req, res, next) {
+router.put('/', function(req, res, next) {
   console.log('put arrived here: payload', JSON.stringify(req.body));
   const email = req.body;
   res.json(email).end();
